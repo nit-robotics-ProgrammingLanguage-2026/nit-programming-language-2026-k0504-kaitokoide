@@ -1,2 +1,20 @@
 #include <stdio.h>
-int main(void){int a;scanf("%d",&a);int f=!(a<0||(a>=10&&a<12)||a>=15);if(f==1){printf("OK");}else{printf("NG");}return 0;}
+
+int main(void)
+{
+    int input;
+    scanf("%d", &input);
+/* 0以上10未満、または12以上15未満ならOKと表示する */
+    if ((0 <= input && input < 10) ||
+        (12 <= input && input < 15))
+    {
+        printf("OK");
+    }
+    else
+    {
+        /* どちらの範囲にも入らなければNGと表示する */
+        printf("NG");
+    }
+
+    return 0;
+}
